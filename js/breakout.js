@@ -1,6 +1,11 @@
 rules = document.getElementById('rules-btn')
+rule = document.getElementById('rules')
 close = document.getElementById('close-btn')
 
 rules.addEventListener('click', () => {
-    document.body.classList.toggle('show')
+    rule.classList.remove('show')
+})
+
+close.addEventListener('click', () => {
+    rules.classList.remove('close-btn')
 })
