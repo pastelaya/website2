@@ -1,4 +1,4 @@
-rules = document.getElementById('rules')
+rules = document.getElementById('rules-btn')
 close = document.getElementById('close-btn')
 
 rules.addEventListener('click', () => {
