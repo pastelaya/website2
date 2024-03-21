@@ -10,7 +10,6 @@ body {
     justify-content: center;
     min-height: 100vh;
     min-width: 100vw;
-    overflow: hidden;
     margin: 0;
     font-family: cursive;
 }
@@ -59,7 +58,7 @@ h1 {
     width: 400px;
     padding: 9px 9px;
     line-height: 1.5;
-    /* transform: translateX(-400px); */
+    transform: translateX(-400px);
     transition: transform 1s ease-in-out;
 }
 

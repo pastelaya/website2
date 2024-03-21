@@ -4,8 +4,11 @@ close = document.getElementById('close-btn')
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 
-// ctx.fillStyle = '#bf9bc9';
-// ctx.fillRect(10, 10, 150, 100);
+score = 0;
+
+brickRowCount = 9;
+brickColumnCount = 5;
+
 
 // rules open and close event handlers
 open.addEventListener('click', () => {
@@ -46,6 +49,16 @@ paddle = {
     dx: 0,
 }
 
+// create brick properties
+brickInfo = {
+    w: 70,
+    h: 20,
+    padding: 10,
+    offsetX: 45,
+    offsetY: 60,
+    visibile: true,
+}
+
 // draw paddle
 function drawPaddle() {
     ctx.beginPath()
@@ -57,7 +70,7 @@ function drawPaddle() {
 
 // draw score on canvas
 function drawScore() {
-
+    ctx.font = '20px Arial'
     ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
 }
 
