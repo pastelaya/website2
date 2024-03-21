@@ -61,12 +61,14 @@ brickInfo = {
 
 // draw bricks
 
-function drawBricks() {
     bricks = []
-    for (let i = 0; i < brick.rowCount; i++) {
+    for (let i = 0; i < brick.RowCount; i++) {
         bricks[i] = []
+        for (let j = 0; j < brick.ColumnCount; j++) {
+            let x =  i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX
+        }
     }
-}
+
 
 // draw paddle
 function drawPaddle() {
