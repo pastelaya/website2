@@ -59,6 +59,15 @@ brickInfo = {
     visibile: true,
 }
 
+// draw bricks
+
+function drawBricks() {
+    bricks = []
+    for (let i = 0; i < brick.rowCount; i++) {
+        bricks[i] = []
+    }
+}
+
 // draw paddle
 function drawPaddle() {
     ctx.beginPath()
@@ -74,11 +83,13 @@ function drawScore() {
     ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
 }
 
+
 // draw everything
 function draw() {
 drawPaddle()
 drawBall()
 drawScore()
+drawBricks()
 }
 
 draw()
