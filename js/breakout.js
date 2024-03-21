@@ -57,13 +57,15 @@ function drawPaddle() {
 
 // draw score on canvas
 function drawScore() {
-    
+
+    ctx.fillText(`Score: ${score}, canvas.width-100, 30`)
 }
 
 // draw everything
 function draw() {
 drawPaddle()
 drawBall()
+drawScore()
 }
 
 draw()
