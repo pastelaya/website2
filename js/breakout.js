@@ -49,7 +49,7 @@ paddle = {
 // draw paddle
 function drawPaddle() {
     ctx.beginPath()
-    crx.rect(paddle.x, paddle.y paddle.w, paddle.h)
+    ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h)
     ctx.fillStyle = '#bf9bc9'
     ctx.fill()
     ctx.closePath()
@@ -58,7 +58,7 @@ function drawPaddle() {
 // draw score on canvas
 function drawScore() {
 
-    ctx.fillText(`Score: ${score}, canvas.width-100, 30`)
+    ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
 }
 
 // draw everything
