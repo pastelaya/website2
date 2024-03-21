@@ -35,4 +35,27 @@ function drawBall() {
     ctx.closePath()
 }
 
+// create pattle properties
+
+paddle = {
+    x: canvas.width / 2 - 40,
+    y: canvas.height - 20,
+    w: 80,
+    h: 10,
+    speed: 8,
+    dx: 0,
+}
+
+// draw paddle
+
+function drawPaddle() {
+    ctx.beginPath()
+    crx.rect(paddle.x, paddle.y paddle.w, paddle.h)
+    ctx.fillStyle = '#bf9bc9'
+    ctx.fill()
+    ctx.closePath()
+}
+
+
+drawPaddle()
 drawBall()
