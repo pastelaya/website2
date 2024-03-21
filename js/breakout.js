@@ -59,15 +59,17 @@ brickInfo = {
     visibile: true,
 }
 
-// draw bricks
+// creating bricks
 
-    bricks = []
-    for (let i = 0; i < brick.RowCount; i++) {
-        bricks[i] = []
-        for (let j = 0; j < brick.ColumnCount; j++) {
-            const x =  i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX
-        }
+bricks = []
+for (let i = 0; i < brick.RowCount; i++) {
+    bricks[i] = []
+    for (let j = 0; j < brick.ColumnCount; j++) {
+        const x = i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX
+        const y = j * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY
+        bricks[i][j] = {x, y, ...brickInfo}
     }
+}
 
 
 // draw paddle
@@ -82,16 +84,29 @@ function drawPaddle() {
 // draw score on canvas
 function drawScore() {
     ctx.font = '20px Arial'
-    ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
+    ctx.fillText(`Score: ${score}`, canvas.width - 100, 30)
 }
 
+// draw bricks on canvas
+function drawBricks() {
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            ctx.beginPath()
+            ctx.rect(brick.x, brick.y, brick.w, brick.h)
+            ctx.fillStyle = '#bf9bc9'
+            ctx.fill()
+            ctx.closePath()
+        })
+
+    })
+}
 
 // draw everything
 function draw() {
-drawPaddle()
-drawBall()
-drawScore()
-drawBricks()
+    drawPaddle()
+    drawBall()
+    drawScore()
+    drawBricks()
 }
 
 draw()
