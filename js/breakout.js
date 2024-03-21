@@ -47,7 +47,6 @@ paddle = {
 }
 
 // draw paddle
-
 function drawPaddle() {
     ctx.beginPath()
     crx.rect(paddle.x, paddle.y paddle.w, paddle.h)
@@ -56,6 +55,15 @@ function drawPaddle() {
     ctx.closePath()
 }
 
+// draw score on canvas
+function drawScore() {
+    
+}
 
+// draw everything
+function draw() {
 drawPaddle()
 drawBall()
+}
+
+draw()
