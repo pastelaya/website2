@@ -161,123 +161,19 @@ if (ball.x + ball.size < 0)
 // paddle collision
 if (ball.x - ball.size > paddle.x && paddle.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y)
 {
-    ball.dy = -1 * ball.dy]
-
-]
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]][\[\[[[[[[[[[[[[[\[\
-
-]]]]]]]]]]]]]]]]
+    ball.dy = -1 * ball.dy
+}
+
+/// brick collision
+bricks.forEach(column => {
+    column.forEach(brick => {
+        if (brick.visible) {
+            if (ball.y - ball.size < brick.y + brick.h)
+            ball.dy = -1 * ball.dy
+            brick.visible = false
+            }
+        })
+    })
 }
 
 }
