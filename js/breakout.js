@@ -171,7 +171,7 @@ bricks.forEach(column => {
             if (ball.y - ball.size < brick.y + brick.h)
             ball.dy = -1 * ball.dy
             brick.visible = false
-            
+            increaseScore()
             }
         })
     })
