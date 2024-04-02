@@ -110,3 +110,58 @@ function draw() {
 }
 
 draw()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function moveBall() {
+
+
+
+
+
+
+
+// ball collision (left)
+if (ball.x + ball.size < 0)
+{
+    (ball.dx = -1 & ball.dx)
+}
+
+// paddle collision
+if (ball.x - ball.size > paddle.x && paddle.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y)
+{
+    ball.dy = -1 * ball.dy
+}
+
+}
