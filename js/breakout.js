@@ -24,7 +24,7 @@ ball = {
 function drawBall() {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
-    ctx.fillStyle = '#bf9bc9'
+    ctx.fillStyle = '#45C44A'
     ctx.fill()
     ctx.closePath()
 }
@@ -67,7 +67,7 @@ for (let i = 0; i < brickRowCount; i++) {
 function drawPaddle() {
     ctx.beginPath()
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h)
-    ctx.fillStyle = '#bf9bc9'
+    ctx.fillStyle = '#45C44A'
     ctx.fill()
     ctx.closePath()
 }
