@@ -10,15 +10,6 @@ brickRowCount = 9;
 brickColumnCount = 5;
 
 
-// rules open and close event handlers
-open.addEventListener('click', () => {
-    rules.classList.add('show')
-})
-
-close.addEventListener('click', () => {
-    rules.classList.remove('show')
-})
-
 // ball properties
 ball = {
     x: canvas.width / 2,
@@ -110,6 +101,15 @@ function draw() {
 }
 
 draw()
+
+// rules open and close event handlers
+open.addEventListener('click', () => {
+    rules.classList.add('show')
+})
+
+close.addEventListener('click', () => {
+    rules.classList.remove('show')
+})
 
 
 
