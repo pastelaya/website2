@@ -47,7 +47,7 @@ brickInfo = {
     padding: 10,
     offsetX: 45,
     offsetY: 60,
-    visibile: true,
+    visible: true,
 }
 
 // creating bricks
