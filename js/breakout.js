@@ -150,7 +150,8 @@ function moveBall() {
 
 
 
-
+// ball collision (bottom)
+if (ball)
 
 // ball collision (left)
 if (ball.x + ball.size < 0)
