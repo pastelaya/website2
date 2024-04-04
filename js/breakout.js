@@ -116,6 +116,10 @@ function movePaddle() {
 
 
 
+// keyboard event handlers
+document.addEventListener('keydown', keyDown)
+
+
 // move ball on canvas
 function moveBall() {
 
