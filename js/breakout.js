@@ -101,6 +101,7 @@ function draw() {
 }
 
 function update() {
+    moveBall()
     movePaddle()
     draw()
     requestAnimationFrame(update)
@@ -110,54 +111,11 @@ update()
 
 // move paddle on canvas
 
-// rules open and close event handlers
-open.addEventListener('click', () => {
-    rules.classList.add('show')
-})
-
-close.addEventListener('click', () => {
-    rules.classList.remove('show')
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 function moveBall() {
-
-
-
-
-
+    
 // ball collision (bottom)
 if (ball)
 
@@ -190,4 +148,12 @@ bricks.forEach(column => {
     })
 }
 
-}
+
+// rules open and close event handlers
+open.addEventListener('click', () => {
+    rules.classList.add('show')
+})
+
+close.addEventListener('click', () => {
+    rules.classList.remove('show')
+})
