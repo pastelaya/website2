@@ -35,7 +35,8 @@ h1 {
 }
 
 .btn:hover {
-    background:#45C44A;
+    background:#FDFE99;
+    color: black;
 }
 
 .btn:active {
@@ -46,6 +47,10 @@ h1 {
     position: absolute;
     top: 30px;
     left: 30px;
+}
+
+.close-btn {
+    background-color: #45C44A;
 }
 
 .rules {
