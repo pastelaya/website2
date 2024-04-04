@@ -51,6 +51,9 @@ h1 {
 
 .close-btn {
     background-color: #45C44A;
+    position: absolute;
+    bottom: 20px;
+    left: 125px;
 }
 
 .rules {
