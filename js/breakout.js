@@ -125,8 +125,7 @@ function keyDown(e) {
 
 // keyup event
 function keyUp(e) {
-    // console.log(e.key)
-    if (e.key == 'ArrowLeft' || e.key == 'Left' || e.key == 'ArrowRight' || e.key == 'Right') {
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'ArrowLeft' || e.key == 'Left') {
         paddle.dx = 0
     }
 }
