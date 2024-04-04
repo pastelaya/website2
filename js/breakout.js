@@ -123,9 +123,18 @@ function keyDown(e) {
     }
 }
 
+// keyup event
+function keyUp(e) {
+    // console.log(e.key)
+    if (e.key == 'ArrowLeft' || e.key == 'Left' || e.key == 'ArrowRight' || e.key == 'Right') {
+        paddle.dx = 0
+    }
+}
+
 
 // keyboard event handlers
 document.addEventListener('keydown', keyDown)
+document.addEventListener('keyup', keyUp)
 
 
 // move ball on canvas
