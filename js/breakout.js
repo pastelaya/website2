@@ -111,7 +111,7 @@ update()
 
 // move paddle on canvas
 function movePaddle() {
-    
+    paddle.x = paddle.x + paddle.dx
 }
 
 
