@@ -110,12 +110,15 @@ function update() {
 update()
 
 // move paddle on canvas
-
-
-
-
-function moveBall() {
+function movePaddle() {
     
+}
+
+
+
+// move ball on canvas
+function moveBall() {
+
 // ball collision (bottom)
 if (ball)
 
