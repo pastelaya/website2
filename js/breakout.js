@@ -101,11 +101,14 @@ function draw() {
 }
 
 function update() {
+    movePaddle()
     draw()
     requestAnimationFrame(update)
 }
 
 update()
+
+// move paddle on canvas
 
 // rules open and close event handlers
 open.addEventListener('click', () => {
