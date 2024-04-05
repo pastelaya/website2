@@ -155,6 +155,7 @@ document.addEventListener('keyup', keyUp)
 // move ball on canvas
 function moveBall() {
     ball.x = ball.x + ball.dx
+    ball.y = ball.y + ball.dy
 }
 
 // ball collision (bottom)
@@ -186,7 +187,6 @@ bricks.forEach(column => {
         }
     })
 })
-}
 
 
 // rules open and close event handlers
