@@ -158,13 +158,20 @@ function moveBall() {
     ball.y = ball.y + ball.dy
 }
 
+// ball collision (top)
+if (ball.y + ball.size < 0) {
+    ball.dy = -1 * ball.dy
+}
+
+// ball collision (right)
+
+
 // ball collision (bottom)
-if (ball)
 
     // ball collision (left)
-    if (ball.x + ball.size < 0) {
-        (ball.dx = -1 & ball.dx)
-    }
+if (ball.x + ball.size < 0) {
+    ball.dx = -1 & ball.dx
+}
 
 // paddle collision
 if (ball.x - ball.size > paddle.x && paddle.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y) {
