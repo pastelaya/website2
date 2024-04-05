@@ -58,7 +58,11 @@ for (let i = 0; i < brickRowCount; i++) {
     for (let j = 0; j < brickColumnCount; j++) {
         const x = i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX
         const y = j * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY
-        bricks[i][j] = {x, y, ...brickInfo}
+        bricks[i][j] = {
+            x,
+            y,
+            ...brickInfo
+        }
     }
 }
 
@@ -100,9 +104,6 @@ function draw() {
     drawScore()
     drawBricks()
 }
-
-// move ball on canvas
-function moveBall() {
 
 function update() {
     moveBall()
@@ -151,19 +152,21 @@ document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
 
+// move ball on canvas
+function moveBall() {
+    ball.x = ball.x + ball.dx
+}
 
 // ball collision (bottom)
 if (ball)
 
-// ball collision (left)
-if (ball.x + ball.size < 0)
-{
-    (ball.dx = -1 & ball.dx)
-}
+    // ball collision (left)
+    if (ball.x + ball.size < 0) {
+        (ball.dx = -1 & ball.dx)
+    }
 
 // paddle collision
-if (ball.x - ball.size > paddle.x && paddle.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y)
-{
+if (ball.x - ball.size > paddle.x && paddle.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y) {
     ball.dy = -1 * ball.dy
 }
 
@@ -176,14 +179,13 @@ bricks.forEach(column => {
             ball.x + ball.size < brick.x + brick.w &&
             ball.y - ball.size < brick.y + brick.h &&
             ball.y + ball.size > brick.y
-            )
-            {
+        ) {
             ball.dy = -1 * ball.dy
             brick.visible = false
             increaseScore()
-            }
-        })
+        }
     })
+})
 }
 
 
