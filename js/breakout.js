@@ -164,7 +164,9 @@ if (ball.y + ball.size < 0) {
 }
 
 // ball collision (right)
-
+if (ball.x + ball.size > canvas.width) {
+    ball.dx = -1 * ball.dx
+}
 
 // ball collision (bottom)
 
