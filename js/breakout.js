@@ -101,6 +101,9 @@ function draw() {
     drawBricks()
 }
 
+// move ball on canvas
+function moveBall() {
+
 function update() {
     moveBall()
     movePaddle()
@@ -148,8 +151,6 @@ document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
 
-// move ball on canvas
-function moveBall() {
 
 // ball collision (bottom)
 if (ball)
