@@ -1,2 +1,9 @@
 
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8cd49f
+}
