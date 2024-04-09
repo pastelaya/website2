@@ -169,13 +169,13 @@ if (ball.x + ball.size > canvas.width) {
 }
 
 // ball collision (bottom)
-if (ball.y + ball.size > canvas.height){
+if (ball.y + ball.size > canvas.height) {
     ball.dy = -1 * ball.dy
     showAllBricks()
     score = 0
 }
 
-    // ball collision (left)
+// ball collision (left)
 if (ball.x + ball.size < 0) {
     ball.dx = -1 & ball.dx
 }
