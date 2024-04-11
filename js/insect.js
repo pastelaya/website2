@@ -5,6 +5,8 @@ const start_btn = document.getElementById('start-btn')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
+const audio = new Audio('css/sounds/four.mp3');
+
 let seconds = 0
 let score = 0
 let selected_insect = {}
@@ -69,6 +71,7 @@ function catchInsect() {
 function addInsects() {
     setTimeout(createInsect, 1000)
     setTimeout(createInsect, 1500)
+    audio.play();
 }
 
 function increaseScore() {
