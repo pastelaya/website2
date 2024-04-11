@@ -22,7 +22,7 @@ choose_insect_btns.forEach(btn => {
         screens[1].classList.add('up')
         selected_insect = {src, alt}
         setTimeout(createInsect, 1000)
-        // startGame()
+        startGame()
     })
 })
 
@@ -43,6 +43,13 @@ function createInsect() {
 function catchInsect() {
     increaseScore()
     this.classList.add('caught')
+    setTimeout(() => this.remove(), 2000)
+    addInsects()
+}
+
+function addInsects() {
+    setTimeout(createInsect, 1000)
+    setTimeout(createInsect, 1500)
 }
 
 function increaseScore() {
