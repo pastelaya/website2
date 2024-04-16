@@ -207,6 +207,8 @@ bricks.forEach(column => {
 })
 
 
+
+
 // rules open and close event handlers
 open.addEventListener('click', () => {
     rules.classList.add('show')
