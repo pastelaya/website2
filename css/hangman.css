@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Kosugi&family=Montserrat:ital,wght@1,600&family=Permanent+Marker&family=VT323&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,7 +7,26 @@
 body {
     background-color: #1d84b8;
     color: #ffffff;
-    font-family: 
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+    letter-spacing: 4px;
+    color: white;
+}
+
+h1 {
+    margin: 20px 0 0;
+}
+
+.game-container {
+    padding: 20px 30px;
+    position: relative;
 }
 
 .figure-container {
