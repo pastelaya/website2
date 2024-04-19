@@ -159,7 +159,7 @@ document.addEventListener('keyup', keyUp)
 function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
-}
+
 
 // ball collision (top)
 if (ball.y + ball.size < 0) {
@@ -195,19 +195,22 @@ if (
 /// brick collision
 bricks.forEach(column => {
     column.forEach(brick => {
-        if (
-            brick.visible &&
-            ball.x - ball.size > brick.w &&
+        if (brick.visible){
+            if (ball.x - ball.size > brick.w &&
             ball.x + ball.size < brick.x + brick.w &&
             ball.y - ball.size < brick.y + brick.h &&
-            ball.y + ball.size > brick.y
-        ) {
-            ball.dy = -1 * ball.dy
+            ball.y + ball.size > brick.y)
+            {
+
+            ball.dy = -ball.dy
             brick.visible = false
             increaseScore()
+            }
         }
     })
 })
+
+}
 
 function increaseScore() {
     score++
