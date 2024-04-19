@@ -206,7 +206,22 @@ bricks.forEach(column => {
     })
 })
 
+function increaseScore() {
+    score++
 
+    if (score == brickCount * brickColumnCount){
+        score=0
+        showAllBricks()
+    }
+}
+
+function showAllBricks() {
+    bricks.forEach(column =>{
+        column.forEach(brick =>{
+            brick.visible = true
+        })
+    })
+}
 
 
 // rules open and close event handlers
