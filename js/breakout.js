@@ -1,8 +1,8 @@
 open = document.getElementById('rules-btn')
 rules = document.getElementById('rules')
 close = document.getElementById('close-btn')
-canvas = document.getElementById("canvas");
-ctx = canvas.getContext("2d");
+canvas = document.getElementById("canvas")
+ctx = canvas.getContext("2d")
 
 score = 0;
 
@@ -22,7 +22,7 @@ ball = {
 
 // draw ball on canvas
 function drawBall() {
-    ctx.beginPath();
+    ctx.beginPath()
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2)
     ctx.fillStyle = '#45C44A'
     ctx.fill()
