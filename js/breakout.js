@@ -141,7 +141,10 @@ function keyDown(e) {
 
 // keyup event
 function keyUp(e) {
-    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'ArrowLeft' || e.key == 'Left') {
+    if (e.key == 'ArrowRight' || e.key == 'Right') {
+        paddle.dx = 0
+}
+    if (e.key == 'ArrowLeft' || e.key == 'Left') {
         paddle.dx = 0
     }
 }
@@ -177,7 +180,7 @@ if (ball.y + ball.size > canvas.height) {
 
 // ball collision (left)
 if (ball.x + ball.size < 0) {
-    ball.dx = -1 & ball.dx
+    ball.dx = -1 * ball.dx
 }
 
 // paddle collision
