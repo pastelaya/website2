@@ -17,7 +17,14 @@ const wrongLetters = []
 // show hidden word
 function displayWord() {
     wordEl.innerHTML = `
-    ${selectedWord}
+    ${selectedWord
+        .split('')
+        .map(letter => `
+            <span class="letter">
+            ${correctLetters.includes(letter) ? letter : ''}
+            </span>
+        `).join('')
+    }
 
     `
 }
