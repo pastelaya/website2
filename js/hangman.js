@@ -25,7 +25,6 @@ function displayWord() {
             </span>
         `).join('')
     }
-
 `
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
@@ -34,5 +33,11 @@ function displayWord() {
         popup.style.display = 'flex'
     }
 }
+
+// Keydown letter press
+window.eventListener('keydown', e = {
+    console.log(e.keyCode)
+})
+
 
 displayWord()
