@@ -43,6 +43,10 @@ window.addEventListener('keydown', e = {
         if (selectedWord.includes(letter)) {
             if (!correctLetters.includes(letter)){
                 correctLetters.push(letter)
+
+                displayWord()
+            } else {
+                showNotification()
             }
         }
     }
