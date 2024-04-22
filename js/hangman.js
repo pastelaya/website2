@@ -34,6 +34,17 @@ function displayWord() {
     }
 }
 
+// Update the wrong letters
+function updateWrongLettersEl() {
+    console.log('Update Wrong')
+}
+
+// show notification
+function showNotification() {
+    notification.classList.add('show')
+}
+
+
 // Keydown letter press
 window.addEventListener('keydown', e = {
 
@@ -51,6 +62,8 @@ window.addEventListener('keydown', e = {
         } else {
             if (!wrongLitters.includes(letter)){
                 wrongLetters.push(letter)
+
+                updateWrongLettersEl()
             } else {
                 showNotification()
             }
