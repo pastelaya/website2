@@ -48,6 +48,10 @@ window.addEventListener('keydown', e = {
             } else {
                 showNotification()
             }
+        } else {
+            if (!wrongLitters.includes(letter)){
+                wrongLetters.push(letter)
+            }
         }
     }
 })
