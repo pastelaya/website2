@@ -11,7 +11,7 @@ const word = ['rogue', 'barbarian', 'bard', 'fighter', 'cleric', 'paladin', 'dru
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
-const correctLetters = ['d', 'r']
+const correctLetters = []
 const wrongLetters = []
 
 // show hidden word
@@ -28,7 +28,11 @@ function displayWord() {
 
 `
     const innerWord = wordEl.innerText.replace(/\n/g, '')
-    console.log(wordEl.innerText)
+
+    if (innerWord == selectedWord) {
+        finalMessage.innerText = "Congrats traveler! You've won this game!"
+        popup.style.display = 'flex'
+    }
 }
 
 displayWord()
