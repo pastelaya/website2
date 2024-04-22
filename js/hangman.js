@@ -6,7 +6,7 @@ const notification = document.getElementById('notification-container')
 const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 
-const word = ['rogue', 'barbarian', 'bard', 'fighter', 'cleric', 'paladin']
+const word = ['rogue', 'barbarian', 'bard', 'fighter', 'cleric', 'paladin', 'druid', 'warlock', 'wizard']
 
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
