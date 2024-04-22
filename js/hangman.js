@@ -11,7 +11,7 @@ const word = ['rogue', 'barbarian', 'bard', 'fighter', 'cleric', 'paladin', 'dru
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
-const correctLetters = []
+const correctLetters = ['d', 'r']
 const wrongLetters = []
 
 // show hidden word
@@ -26,7 +26,9 @@ function displayWord() {
         `).join('')
     }
 
-    `
+`
+    const innerWord = wordEl.innerText.replace(/\n/g, '')
+    console.log(wordEl.innerText)
 }
 
 displayWord()
