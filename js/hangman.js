@@ -35,8 +35,12 @@ function displayWord() {
 }
 
 // Keydown letter press
-window.eventListener('keydown', e = {
-    console.log(e.keyCode)
+window.addEventListener('keydown', e = {
+
+    if (e.keyCode >= 65 && e.keyCode <= 90){
+        const letter = e.key
+
+    }
 })
 
 
