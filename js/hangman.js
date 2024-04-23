@@ -1,5 +1,5 @@
 const wordEl = document.getElementById('word')
-wrongLettersEl = document.getElementById('wrong-letters')
+wrongLettersEl = document.getElementById('wrongLetters')
 const playAgainBtn = document.getElementById('play-button')
 const popup = document.getElementById('pupop-container')
 const notification = document.getElementById('notification-container')
@@ -30,14 +30,13 @@ function displayWord() {
 
     if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congrats traveler! You have won this game!'
-        popup.display = 'flex'
+        popup.style.display = 'flex'
     }
 }
 
 // Update the wrong letters
 function updateWrongLettersEl() {
     //display wrong letters
-    console.log('Update Wrong')
     wrongLettersEl.innerHTML = `
     ${wrongLetters.length = 0 ? `<p>Wrong</p>` : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
