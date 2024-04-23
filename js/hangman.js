@@ -106,7 +106,7 @@ window.addEventListener('keydown', e = {
 
     displayWord()
 
-    updateWrongLetterEl()
+    updateWrongLettersEl()
 
     popup.style.display = 'none'
 })
