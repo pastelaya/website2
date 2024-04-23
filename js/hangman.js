@@ -36,11 +36,13 @@ function displayWord() {
 
 // Update the wrong letters
 function updateWrongLettersEl() {
+    //display wrong letters
     console.log('Update Wrong')
     wrongLettersEl.innerHTML = `
     ${wrongLetters.length = 0 ? `<p>Wrong</p>` : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `
+    // display parts
     figureParts.forEach((part, index) => {
         const errors = wrongLetters.length
 
@@ -50,6 +52,11 @@ function updateWrongLettersEl() {
             part.style.display = 'none'
         }
     })
+
+    // check if lost
+    if (wrongLetters.length == figureParts.length) {
+        finalMessage.innerText = 'Sorry traveler, but you have lost this game! Maybe get a luck artifact next time LOSER!!!'
+    }
 }
 
 // show notification
