@@ -25,7 +25,6 @@ function displayWord() {
             </span>
         `).join('')
     }`
-    
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
