@@ -29,7 +29,7 @@ function displayWord() {
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
-        finalMessage.innerText = "Congrats traveler! You've won this game!"
+        finalMessage.innerText = 'Congrats traveler! You have won this game!'
         popup.style.display = 'flex'
     }
 }
@@ -38,11 +38,18 @@ function displayWord() {
 function updateWrongLettersEl() {
     console.log('Update Wrong')
     wrongLettersEl.innerHTML = `
-    ${wrongLetters.length . 0 ? `<p>Wrong</p>` : ''}
+    ${wrongLetters.length = 0 ? `<p>Wrong</p>` : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
-
-
     `
+    figureParts.forEach((part, index) => {
+        const errors = wrongLetters.length
+
+        if ( index < errors) {
+            part.style.display = 'block'
+        } else {
+            part.style.display = 'none'
+        }
+    })
 }
 
 // show notification
