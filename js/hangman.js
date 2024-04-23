@@ -55,7 +55,7 @@ function updateWrongLettersEl() {
 
     // check if lost
     if (wrongLetters.length == figureParts.length) {
-        finalMessage.innerText = 'Sorry traveler, but you have lost this game! Maybe get a luck artifact next time LOSER!!!'
+        finalMessage.innerText = 'Sorry traveler, but you have lost this game! Maybe get a luck artifact next time LOSER!!! Oh and the word was ${selectedWord}'
     }
 }
 
