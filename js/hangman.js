@@ -24,13 +24,13 @@ function displayWord() {
             ${correctLetters.includes(letter) ? letter : ''}
             </span>
         `).join('')
-    }
-`
+    }`
+    
     const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congrats traveler! You have won this game!'
-        popup.style.display = 'flex'
+        popup.display = 'flex'
     }
 }
 
